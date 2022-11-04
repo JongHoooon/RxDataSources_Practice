@@ -1,5 +1,13 @@
 # RxDataSources_Practice
 
+<br>
+<br>
+
+![Simulator Screen Recording - iPhone 11 Pro - 2022-11-04 at 22 11 44](https://user-images.githubusercontent.com/98168685/199982561-bb68387f-259e-41bf-9b98-80c0ad5b308d.gif)
+
+<br>
+<br>
+
 > [RxDataSoureces](https://github.com/RxSwiftCommunity/RxDataSources) 의 How순서에 따라 적용해 보겠습니다.
 
 ## 1. `SectionModelType` protocol을 따르는 struct로 section을 정의합니다.
@@ -35,11 +43,11 @@ extension SectionOfBoardPost: SectionModelType {
 
 > [Differentiator](https://github.com/RxSwiftCommunity/RxDataSources/tree/main/Sources/Differentiator) 라이브러리를 사용하면 1번과정을 다음과 같이 줄일 수 있습니다.
 >
-```swift
-typealias SectionOfBoardPost = SectionModel<String, BoardPost>
-```
+> ```swift
+> typealias SectionOfBoardPost = SectionModel<String, BoardPost>
+> ```
 
-
+<br>
 
 ## 2. dataSource 객체를 만들고 `SectionOfCustomData` 타입을 전달한다.
 
@@ -108,6 +116,7 @@ var sections = [
       .bind(to: collectionView.rx.items(dataSource: dataSource))
       .disposed(by: disposebag)
 ```
+
 
 
 
